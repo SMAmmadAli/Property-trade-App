@@ -28,7 +28,7 @@ class BoxDisplay extends StatelessWidget {
           padding: const EdgeInsets.only(top: 0, left: 35.0, right: 16),
           child: Container(
             decoration: BoxDecoration(
-                color: ColorConstant.Color2,
+                color: ColorConstant.darkBlue,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(21),
                   bottomRight: Radius.circular(21),

@@ -15,7 +15,7 @@ class MiddleText extends StatelessWidget {
         style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            color: ColorConstant.Color2),
+            color: ColorConstant.darkBlue),
       ),
     );
   }

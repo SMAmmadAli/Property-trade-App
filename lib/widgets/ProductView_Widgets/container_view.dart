@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/utils/text_constant.dart';
 
 import '../../utils/color_constant.dart';
 
@@ -11,13 +12,13 @@ class ContainerView extends StatelessWidget {
       child: Container(
         width: 90,
         height: 42,
-        decoration: BoxDecoration(color: ColorConstant.Color2),
+        decoration: BoxDecoration(color: ColorConstant.darkBlue),
         child: Text(
-          "House",
+          TextConstant.House,
           style: TextStyle(
               fontWeight: FontWeight.w800,
               fontSize: 16,
-              color: ColorConstant.Color1),
+              color: ColorConstant.darkBlue),
         ),
       ),
     );

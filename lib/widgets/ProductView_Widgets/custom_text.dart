@@ -16,7 +16,7 @@ class CustomText extends StatelessWidget {
         style: TextStyle(
             fontWeight: FontWeight.w800,
             fontSize: 24,
-            color: ColorConstant.Color2),
+            color: ColorConstant.darkBlue),
       ),
     );
   }

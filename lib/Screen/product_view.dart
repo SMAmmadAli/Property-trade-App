@@ -8,8 +8,7 @@ import 'package:property_trade_app/widgets/ProductView_Widgets/box_dispaly.dart'
 import 'package:property_trade_app/widgets/ProductView_Widgets/custom_text.dart';
 import 'package:property_trade_app/widgets/ProductView_Widgets/custom_text2.dart';
 import 'package:property_trade_app/widgets/ProductView_Widgets/middle_text.dart';
-
-import '../widgets/ProductView_Widgets/boxIcon.dart';
+import 'package:property_trade_app/widgets/ProductView_Widgets/tab_bar.dart';
 
 class Product_Screen extends StatelessWidget {
   const Product_Screen({super.key});
@@ -40,14 +39,16 @@ class Product_Screen extends StatelessWidget {
                 CustomText(text1: TextConstant.ContantText2)
               ],
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 10.0),
+            MyTabBar(),
+            const SizedBox(height: 10.0),
             MiddleText(mText: TextConstant.BestForYour),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 10.0),
             const BoxDisplay(),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 10.0),
             MiddleText(mText: TextConstant.Nearby_your_location),
             const SizedBox(height: 10.0),
-            BottomBox(),
+            const BottomBox(),
             const SizedBox(height: 10.0),
           ],
         ),

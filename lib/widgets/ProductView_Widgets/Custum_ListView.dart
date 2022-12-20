@@ -21,7 +21,7 @@ class CustomListView extends StatelessWidget {
                 return Container(
                   height: 42,
                   width: 90,
-                  color: ColorConstant.Color2,
+                  color: ColorConstant.darkBlue,
                   child: Text(
                     items[index],
                     style: TextStyle(

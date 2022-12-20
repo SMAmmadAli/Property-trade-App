@@ -5,7 +5,7 @@ class AvatarImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.only(top: 30.0, right: 35.0),
       child: CircleAvatar(
         backgroundImage: AssetImage('assets/image/Ammad.jpg'),

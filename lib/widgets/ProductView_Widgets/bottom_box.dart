@@ -37,14 +37,14 @@ class BottomBox extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w700,
-                        color: ColorConstant.Color2),
+                        color: ColorConstant.darkBlue),
                   ),
                   Text(
                     TextConstant.Location,
                     style: TextStyle(
                         fontSize: 8,
                         fontWeight: FontWeight.w400,
-                        color: ColorConstant.Color2),
+                        color: ColorConstant.darkBlue),
                   ),
                   const BoxIconn(),
                 ],
