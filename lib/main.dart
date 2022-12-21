@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/Screen/home_view.dart';
+import 'package:property_trade_app/Screen/signup_view.dart';
 import 'Screen/product_view.dart';
 
 void main() {
@@ -10,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Product_Screen(),
+      home: SignUpView(),
     );
   }
 }
