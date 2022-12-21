@@ -11,13 +11,11 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 35.0),
-      child: Text(
-        text1,
-        style: TextStyle(
-            fontWeight: FontWeight.w800,
-            fontSize: 24,
-            color: ColorConstant.darkBlue),
-      ),
+      child: Text(text1,
+          style: Theme.of(context)
+              .textTheme
+              .headline1!
+              .copyWith(color: ColorConstant.darkBlue)),
     );
   }
 }

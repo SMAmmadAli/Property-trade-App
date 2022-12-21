@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/utils/image_constant.dart';
 
 import '../../utils/color_constant.dart';
 import '../../utils/text_constant.dart';
@@ -21,7 +22,7 @@ class BottomBox extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
-                '../assets/image/inner_house.jpg',
+                MyImage.product_page_innerhouseimg,
                 height: MediaQuery.of(context).size.height * 0.15,
                 width: MediaQuery.of(context).size.width * 0.27,
                 fit: BoxFit.cover,

@@ -12,10 +12,10 @@ class MiddleText extends StatelessWidget {
       padding: const EdgeInsets.only(left: 35.0),
       child: Text(
         mText,
-        style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-            color: ColorConstant.darkBlue),
+        style: Theme.of(context)
+            .textTheme
+            .subtitle1!
+            .copyWith(color: ColorConstant.darkBlue),
       ),
     );
   }

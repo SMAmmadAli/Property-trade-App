@@ -8,7 +8,7 @@ class AvatarImage extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 30.0, right: 35.0),
       child: CircleAvatar(
-        backgroundImage: AssetImage('assets/image/Ammad.jpg'),
+        backgroundImage: AssetImage('../assets/image/personimg.png'),
         radius: 25,
       ),
     );

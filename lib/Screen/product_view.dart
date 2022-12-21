@@ -16,7 +16,7 @@ class Product_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
       backgroundColor: ColorConstant.bgColor,
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +40,7 @@ class Product_Screen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10.0),
-            MyTabBar(),
+            const MyTabBar(),
             const SizedBox(height: 10.0),
             MiddleText(mText: TextConstant.BestForYour),
             const SizedBox(height: 10.0),

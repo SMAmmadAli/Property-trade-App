@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/utils/image_constant.dart';
 
 import '../../utils/color_constant.dart';
 import '../../utils/text_constant.dart';
@@ -20,7 +21,7 @@ class BoxDisplay extends StatelessWidget {
                 topRight: Radius.circular(21),
               ),
               child: Image.asset(
-                '../assets/image/house.jpg',
+                MyImage.product_page_houseimg,
                 fit: BoxFit.cover,
               )),
         )),
@@ -40,20 +41,14 @@ class BoxDisplay extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      TextConstant.House,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: ColorConstant.bgColor),
-                    ),
-                    Text(
-                      TextConstant.Location,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: ColorConstant.bgColor),
-                    ),
+                    Text(TextConstant.House,
+                        style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                            fontWeight: FontWeight.w600, fontSize: 16)),
+                    Text(TextConstant.Location,
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle2!
+                            .copyWith(fontSize: 13)),
                     Row(
                       children: [
                         Icon(
@@ -62,13 +57,8 @@ class BoxDisplay extends StatelessWidget {
                           color: ColorConstant.yellow,
                         ),
                         const SizedBox(width: 5),
-                        Text(
-                          '4 Beds',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: ColorConstant.bgColor),
-                        ),
+                        Text(TextConstant.Bed,
+                            style: Theme.of(context).textTheme.subtitle2),
                         const SizedBox(width: 7),
                         Icon(
                           Icons.bathroom_outlined,
@@ -76,13 +66,8 @@ class BoxDisplay extends StatelessWidget {
                           color: ColorConstant.yellow,
                         ),
                         const SizedBox(width: 5),
-                        Text(
-                          '4 Baths',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: ColorConstant.bgColor),
-                        ),
+                        Text(TextConstant.Baths,
+                            style: Theme.of(context).textTheme.subtitle2),
                         const SizedBox(width: 7),
                         Icon(
                           Icons.car_crash,
@@ -90,13 +75,8 @@ class BoxDisplay extends StatelessWidget {
                           color: ColorConstant.yellow,
                         ),
                         const SizedBox(width: 5),
-                        Text(
-                          '1 Garage',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: ColorConstant.bgColor),
-                        ),
+                        Text(TextConstant.Garage,
+                            style: Theme.of(context).textTheme.subtitle2),
                       ],
                     )
                   ],
