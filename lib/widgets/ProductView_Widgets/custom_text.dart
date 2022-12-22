@@ -10,7 +10,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 35.0),
+      padding: const EdgeInsets.only(left: 20.0),
       child: Text(text1,
           style: Theme.of(context)
               .textTheme

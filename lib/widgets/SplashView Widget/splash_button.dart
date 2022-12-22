@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:property_trade_app/Screen/login_view.dart';
+import 'package:property_trade_app/Screen/home_view.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
 
-class SignButton extends StatelessWidget {
+class Splash_button extends StatelessWidget {
   final String buttonText;
-  const SignButton({super.key, required this.buttonText});
+  const Splash_button({super.key, required this.buttonText});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class SignButton extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const LoginView()),
+          MaterialPageRoute(builder: (context) => const HomeView()),
         );
       },
       child: Center(

@@ -22,7 +22,7 @@ class SignUpView extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 20.0, left: 15.0),
                 child: Icon(
-                  CupertinoIcons.arrow_left_square,
+                  CupertinoIcons.arrow_left,
                   size: 25,
                 ),
               ),
@@ -76,7 +76,9 @@ class SignUpView extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              SignButton(buttonText: TextConstant.signButton),
+              SignButton(
+                buttonText: TextConstant.signButton,
+              ),
               const SizedBox(
                 height: 10,
               ),

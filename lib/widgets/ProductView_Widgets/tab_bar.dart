@@ -13,7 +13,7 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     TabController tabController = TabController(length: 4, vsync: this);
     return Padding(
-      padding: const EdgeInsets.only(left: 35.0),
+      padding: const EdgeInsets.only(left: 15.0),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         elevation: 5,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/utils/text_constant.dart';
 
 import '../../utils/color_constant.dart';
 
@@ -16,7 +17,7 @@ class BoxIconn extends StatelessWidget {
         ),
         const SizedBox(width: 2),
         Text(
-          '4 Beds',
+          TextConstant.Bed,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 9,
@@ -30,7 +31,7 @@ class BoxIconn extends StatelessWidget {
         ),
         const SizedBox(width: 2),
         Text(
-          '4 Baths',
+          TextConstant.Baths,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 9,
@@ -44,7 +45,7 @@ class BoxIconn extends StatelessWidget {
         ),
         const SizedBox(width: 2),
         Text(
-          '1 Garage',
+          TextConstant.Garage,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 9,

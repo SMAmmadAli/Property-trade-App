@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:property_trade_app/Screen/login_view.dart';
+import 'package:property_trade_app/Screen/splash_view.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
+import 'package:property_trade_app/utils/text_constant.dart';
 
-class SignButton extends StatelessWidget {
+class Login_Button extends StatelessWidget {
   final String buttonText;
-  const SignButton({super.key, required this.buttonText});
+  const Login_Button({super.key, required this.buttonText});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const LoginView()),
+          MaterialPageRoute(builder: (context) => const SplashView()),
         );
       },
       child: Center(

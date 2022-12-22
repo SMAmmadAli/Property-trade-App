@@ -14,7 +14,7 @@ class BoxDisplay extends StatelessWidget {
       children: [
         Container(
             child: Padding(
-          padding: const EdgeInsets.only(left: 35.0, right: 16),
+          padding: const EdgeInsets.only(left: 20.0, right: 16),
           child: ClipRRect(
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(21),
@@ -22,11 +22,12 @@ class BoxDisplay extends StatelessWidget {
               ),
               child: Image.asset(
                 MyImage.product_page_houseimg,
+                width: MediaQuery.of(context).size.width * 0.9,
                 fit: BoxFit.cover,
               )),
         )),
         Padding(
-          padding: const EdgeInsets.only(top: 0, left: 35.0, right: 16),
+          padding: const EdgeInsets.only(top: 0, left: 20.0, right: 16),
           child: Container(
             decoration: BoxDecoration(
                 color: ColorConstant.darkBlue,

@@ -11,7 +11,7 @@ class CustomText2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 35.0, top: 30.0),
+      padding: const EdgeInsets.only(left: 20.0, top: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

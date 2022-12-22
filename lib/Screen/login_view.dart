@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
 import 'package:property_trade_app/widgets/Login_widgets/boxs.dart';
 import 'package:property_trade_app/widgets/Login_widgets/checkbox.dart';
+import 'package:property_trade_app/widgets/Login_widgets/login_button.dart';
 import 'package:property_trade_app/widgets/Login_widgets/textfield_veiw.dart';
 import 'package:property_trade_app/widgets/SignUp_Widget/bottom_text.dart';
 import 'package:property_trade_app/widgets/SignUp_Widget/button.dart';
@@ -25,7 +26,7 @@ class LoginView extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(top: 20.0, left: 15.0),
               child: Icon(
-                CupertinoIcons.arrow_left_square,
+                CupertinoIcons.arrow_left,
                 size: 25,
               ),
             ),
@@ -65,9 +66,7 @@ class LoginView extends StatelessWidget {
             const SizedBox(height: 20),
             const Mycheckbox(),
             const SizedBox(height: 10),
-            SignButton(
-              buttonText: TextConstant.signIn,
-            ),
+            Login_Button(buttonText: TextConstant.signIn),
             const SizedBox(height: 10),
             SignInButtonText(bText1: '', bText2: TextConstant.forgot1),
             const SizedBox(height: 10),
