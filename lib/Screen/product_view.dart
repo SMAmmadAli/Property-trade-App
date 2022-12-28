@@ -17,7 +17,8 @@ class Product_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: const BottomNavBar(),
-      backgroundColor: ColorConstant.bgColor,
+      // backgroundColor: ColorConstant.bgColor,
+      backgroundColor: Color(0xffE5E5E5),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +45,7 @@ class Product_Screen extends StatelessWidget {
             const SizedBox(height: 10.0),
             MiddleText(mText: TextConstant.BestForYour),
             const SizedBox(height: 10.0),
-            const BoxDisplay(),
+            BoxDisplay(),
             const SizedBox(height: 10.0),
             MiddleText(mText: TextConstant.Nearby_your_location),
             const SizedBox(height: 10.0),

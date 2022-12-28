@@ -1,90 +1,156 @@
 import 'package:flutter/material.dart';
 import 'package:property_trade_app/utils/image_constant.dart';
+import 'package:property_trade_app/utils/text_constant.dart';
 
-import '../../utils/color_constant.dart';
-import '../../utils/text_constant.dart';
+class CardItem {
+  final String urlImage;
+  final String cardtitle;
+  final String cardsubTitle;
 
-class BoxDisplay extends StatelessWidget {
-  const BoxDisplay({super.key});
+  CardItem(this.urlImage, this.cardtitle, this.cardsubTitle);
+}
+
+class BoxDisplay extends StatefulWidget {
+  BoxDisplay({super.key});
+
+  @override
+  State<BoxDisplay> createState() => _BoxDisplayState();
+}
+
+class _BoxDisplayState extends State<BoxDisplay> {
+  List<CardItem> items = [
+    CardItem(MyImage.image2, TextConstant.House, TextConstant.Location),
+    CardItem(MyImage.product_page_houseimg, TextConstant.House,
+        TextConstant.Location),
+    CardItem(MyImage.image2, TextConstant.House, TextConstant.Location),
+    CardItem(MyImage.product_page_houseimg, TextConstant.Baths,
+        TextConstant.Location),
+    CardItem(MyImage.image2, TextConstant.House, TextConstant.Location),
+    CardItem(MyImage.product_page_houseimg, TextConstant.House,
+        TextConstant.Location),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-            child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 16),
-          child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(21),
-                topRight: Radius.circular(21),
-              ),
-              child: Image.asset(
-                MyImage.product_page_houseimg,
-                width: MediaQuery.of(context).size.width * 0.9,
-                fit: BoxFit.cover,
-              )),
-        )),
-        Padding(
-          padding: const EdgeInsets.only(top: 0, left: 20.0, right: 16),
-          child: Container(
-            decoration: BoxDecoration(
-                color: ColorConstant.darkBlue,
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(21),
-                  bottomRight: Radius.circular(21),
-                )),
-            width: MediaQuery.of(context).size.width * 0.9,
-            height: MediaQuery.of(context).size.height * 0.15,
-            child: Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(TextConstant.House,
-                        style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                            fontWeight: FontWeight.w600, fontSize: 16)),
-                    Text(TextConstant.Location,
-                        style: Theme.of(context)
-                            .textTheme
-                            .subtitle2!
-                            .copyWith(fontSize: 13)),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.bed_outlined,
-                          size: 15,
-                          color: ColorConstant.yellow,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(TextConstant.Bed,
-                            style: Theme.of(context).textTheme.subtitle2),
-                        const SizedBox(width: 7),
-                        Icon(
-                          Icons.bathroom_outlined,
-                          size: 15,
-                          color: ColorConstant.yellow,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(TextConstant.Baths,
-                            style: Theme.of(context).textTheme.subtitle2),
-                        const SizedBox(width: 7),
-                        Icon(
-                          Icons.car_crash,
-                          size: 15,
-                          color: ColorConstant.yellow,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(TextConstant.Garage,
-                            style: Theme.of(context).textTheme.subtitle2),
-                      ],
-                    )
-                  ],
-                )),
+    return Container(
+      height: 250,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20.0),
+        child: ListView.separated(
+          itemCount: 6,
+          separatorBuilder: (context, index) => const SizedBox(
+            width: 12,
           ),
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) => BuildCard(item: items[index]),
         ),
-      ],
+      ),
     );
   }
 }
+
+Widget BuildCard({required CardItem item}) => ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        width: 230,
+        child: Column(
+          children: [
+            Expanded(
+                child: AspectRatio(
+              aspectRatio: 4 / 3,
+              child: Image.asset(
+                item.urlImage,
+                fit: BoxFit.cover,
+              ),
+            )),
+            Container(
+              color: Color(0xff0F2F44),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0, top: 8),
+                    child: Row(
+                      children: [
+                        Text(
+                          item.cardtitle,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Row(
+                      children: [
+                        Text(
+                          item.cardsubTitle,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10.0, top: 8, bottom: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.bed_outlined,
+                          size: 15,
+                          color: Colors.yellow,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          TextConstant.Bed,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(width: 7),
+                        const Icon(
+                          Icons.bathroom_outlined,
+                          size: 15,
+                          color: Colors.yellow,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          TextConstant.Baths,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(width: 7),
+                        const Icon(
+                          Icons.car_crash,
+                          size: 15,
+                          color: Colors.yellow,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          TextConstant.Garage,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
