@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/Screen/product_view.dart';
 import 'package:property_trade_app/Screen/splash_view.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
 
@@ -12,7 +13,7 @@ class Login_Button extends StatelessWidget {
       onTap: () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const SplashView()),
+          MaterialPageRoute(builder: (context) => const Product_Screen()),
         );
       },
       child: Center(

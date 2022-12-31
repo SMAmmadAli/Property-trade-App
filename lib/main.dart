@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:property_trade_app/Screen/product_view.dart';
 import 'package:property_trade_app/Screen/signup_view.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
 
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
             color: ColorConstant.bgColor),
       )),
       debugShowCheckedModeBanner: false,
-      home: Product_Screen(),
+      home: SignUpView(),
     );
   }
 }

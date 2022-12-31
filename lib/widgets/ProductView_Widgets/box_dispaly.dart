@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_trade_app/Screen/home_view.dart';
 import 'package:property_trade_app/utils/image_constant.dart';
 import 'package:property_trade_app/utils/text_constant.dart';
 
@@ -32,17 +33,23 @@ class _BoxDisplayState extends State<BoxDisplay> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 250,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: ListView.separated(
-          itemCount: 6,
-          separatorBuilder: (context, index) => const SizedBox(
-            width: 12,
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (Context) => HomeView()));
+      },
+      child: Container(
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: ListView.separated(
+            itemCount: 6,
+            separatorBuilder: (context, index) => const SizedBox(
+              width: 12,
+            ),
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => BuildCard(item: items[index]),
           ),
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => BuildCard(item: items[index]),
         ),
       ),
     );

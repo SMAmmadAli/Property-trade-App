@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:property_trade_app/utils/color_constant.dart';
 import 'package:property_trade_app/utils/text_constant.dart';
 import 'package:property_trade_app/widgets/Login_widgets/textfield_veiw.dart';
-import 'package:property_trade_app/widgets/SignUp_Widget/button.dart';
 import 'package:property_trade_app/widgets/SplashView%20Widget/splash_button.dart';
 
 import '../utils/image_constant.dart';
@@ -20,11 +19,16 @@ class SplashView extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 20.0, left: 15.0),
-                  child: Icon(
-                    CupertinoIcons.arrow_left,
-                    size: 25,
+                InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 20.0, left: 15.0),
+                    child: Icon(
+                      CupertinoIcons.arrow_left,
+                      size: 25,
+                    ),
                   ),
                 ),
                 Padding(
