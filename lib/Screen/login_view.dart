@@ -6,7 +6,6 @@ import 'package:property_trade_app/widgets/Login_widgets/checkbox.dart';
 import 'package:property_trade_app/widgets/Login_widgets/login_button.dart';
 import 'package:property_trade_app/widgets/Login_widgets/textfield_veiw.dart';
 import 'package:property_trade_app/widgets/SignUp_Widget/bottom_text.dart';
-import 'package:property_trade_app/widgets/SignUp_Widget/button.dart';
 import 'package:property_trade_app/widgets/SignUp_Widget/line.dart';
 
 import '../utils/image_constant.dart';

@@ -1,37 +1,3 @@
-// import 'package:flutter/cupertino.dart';
-// import 'package:flutter/material.dart';
-// import 'package:property_trade_app/utils/color_constant.dart';
-// import 'package:property_trade_app/utils/image_constant.dart';
-// import 'package:property_trade_app/utils/text_constant.dart';
-
-// class MyListView extends StatelessWidget {
-//   const MyListView({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         leading: InkWell(
-//             onTap: (() => Navigator.pop(context)),
-//             child: Icon(CupertinoIcons.arrow_left)),
-//       ),
-//       body: ListView.builder(
-//           itemBuilder: ((context, index) => ListTile(
-//                 leading: Image.asset(
-//                   MyImage.image2,
-//                   fit: BoxFit.cover,
-//                 ),
-//                 title: Text(TextConstant.RanchHome),
-//                 subtitle: Text(TextConstant.Location),
-//                 trailing: Icon(
-//                   Icons.add,
-//                   size: 25,
-//                   color: ColorConstant.darkBlue,
-//                 ),
-//               ))),
-//     );
-//   }
-// }
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

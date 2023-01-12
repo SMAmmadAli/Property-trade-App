@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:property_trade_app/utils/color_constant.dart';
 import 'package:property_trade_app/utils/text_constant.dart';
 import 'package:property_trade_app/widgets/ProductView_Widgets/avatar_image.dart';
 import 'package:property_trade_app/widgets/ProductView_Widgets/bottom_box.dart';
